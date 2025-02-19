@@ -1,0 +1,266 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color:  #8a2020;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden; /* Ensures glitter effect stays contained */
+}
+
+/* Gold Glitter Background Effect */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://www.transparenttextures.com/patterns/golden-silk.png');
+    opacity: 0.4;
+    z-index: -1;
+    animation: glitter-animation 10s infinite linear;
+}
+
+/* Smooth Moving Glitter Effect */
+@keyframes glitter-animation {
+    0% { background-position: 0 0; }
+    50% { background-position: 100px 100px; }
+    100% { background-position: 0 0; }
+}
+
+/* Gold Borders */
+.gold-border-top, .gold-border-bottom {
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(90deg, #FFD700, #FFEC8B, #FFD700);
+    box-shadow: 0px 0px 10px #FFD700;
+    animation: shimmer 3s infinite alternate;
+}
+
+/* Shimmer animation */
+@keyframes shimmer {
+    0% { opacity: 0.7; }
+    100% { opacity: 1; }
+}
+
+/* Center Content */
+.container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Logo Styling */
+.logo {
+    position: relative;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Logo Image */
+.logo img {
+    width: 200px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Square Shimmer Effect Around the Logo */
+.logo::after {
+    content: "";
+    position: absolute;
+    
+    width: 150px;
+    height: 150px;
+    top:-3px;
+    border: 3px solid rgba(255, 215, 0, 0.8);
+    box-shadow: 0px 0px 10px #FFD700, 0px 0px 20px rgba(255, 215, 0, 0.6);
+    animation: square-shimmer 2s infinite linear;
+}
+
+/* Square Shimmer Animation */
+@keyframes square-shimmer {
+    0% { box-shadow: 0px 0px 5px #FFD700; }
+    50% { box-shadow: 0px 0px 15px #FFEC8B, 0px 0px 20px #FFD700; }
+    100% { box-shadow: 0px 0px 5px #FFD700; }
+}
+
+/* General Styling */
+
+
+/* Container with Breathing Effect */
+.container {
+    text-align: center;
+    padding: 20px;
+    border-radius: 15px;
+    animation: breathing 3s infinite alternate;
+    box-shadow: 0px 0px 20px rgba(255, 215, 0, 0.8);
+}
+
+/* Breathing effect */
+@keyframes breathing {
+    0% {
+        box-shadow: 0px 0px 20px rgba(255, 215, 0, 0.8);
+    }
+    100% {
+        box-shadow: 0px 0px 35px rgba(255, 215, 0, 1);
+    }
+}
+
+/* Logo */
+.logo img {
+    width: 150px;
+    margin-bottom: 15px;
+}
+
+/* Language Buttons */
+.languages {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Row Styling */
+.row {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Full-width Hindi Button */
+.full-width {
+    display: flex;
+    justify-content: center;
+}
+
+/* Button Styling */
+.lang-btn {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: #2c0800;
+    background: linear-gradient(90deg, #ffcc00, #ffb700);
+    padding: 15px 30px;
+    border-radius: 20px;
+    width: 220px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    animation: goldenglow 2s infinite alternate;
+    box-shadow: 0px 0px 10px rgba(255,215,0,0.4);
+}
+
+/* Full-width Hindi Button */
+.full-width .lang-btn {
+    width: 460px;
+}
+
+/* Hover Effects for Buttons */
+.lang-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 20px rgba(255, 223, 0, 1);
+    background: linear-gradient(90deg, #ffd700, #ff9900);
+}
+@keyframes goldenGlow {
+    0% {
+        box-shadow: 0px 0px 15px rgba(255, 215, 0, 0.5);
+    }
+    50% {
+        box-shadow: 0px 0px 25px rgba(255, 215, 0, 0.8);
+    }
+    100% {
+        box-shadow: 0px 0px 15px rgba(255, 215, 0, 0.5);
+    }
+}
+
+/* Call Now Button */
+.call-now-button {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 15px 30px;
+    border-radius: 25px;
+    background-color: green;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    border: 3px solid transparent;
+    position: relative;
+    box-shadow: white
+}
+
+/* Hover Effect: Pops Up and White Background */
+.call-now-button:hover {
+    
+    transform: scale(1.1);
+    box-shadow:  white
+    
+}
+
+/* Breathing Effect */
+@keyframes breathingGlow {
+    0% {
+        box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
+    }
+    100% {
+        box-shadow: 0px 0px 20px rgba(23, 109, 58, 0.8);
+    }
+}
+
+/* Apply breathing effect */
+.call-now-button {
+    animation: breathingGlow 2s infinite alternate;
+}
+
+/* Footer Styling */
+footer {
+    background-color: black;
+    padding: 20px 0;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    margin-top: auto;
+}
+
+/* Inway Branding */
+.inway {
+    color: orange;
+    font-weight: bold;
+}
+
+/* Counter Styling */
+.counter {
+    font-size: 28px;
+    font-weight: bold;
+    color: #FFD700;
+    display: inline-block;
+    font-family: 'Courier New', monospace;
+    letter-spacing: 3px;
+    padding: 10px;
+    background: rgba(255, 215, 0, 0.1);
+    border: 2px solid #FFD700;
+    box-shadow: 0px 0px 15px #FFD700;
+    border-radius: 5px;
+    animation: glow 2s infinite alternate;
+}
+
+/* Glowing Effect */
+@keyframes glow {
+    0% { box-shadow: 0px 0px 10px #FFD700; }
+    100% { box-shadow: 0px 0px 20px #FFD700; }
+}

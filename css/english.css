@@ -1,0 +1,1251 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body Styling */
+body {
+    background: linear-gradient(90deg, rgba(255, 215, 0, 0.3), rgba(255, 215, 0, 0.6), rgba(255, 215, 0, 0.3)); /* Gold gradient background */
+
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Gold-Themed Shimmer Borders */
+.gold-border-top, .gold-border-bottom {
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(90deg, #FFD700, #FFEC8B, #FFD700);
+    box-shadow: 0px 0px 15px #FFD700;
+    animation: shimmer 3s infinite alternate;
+}
+
+/* Shimmer animation */
+@keyframes shimmer {
+    0% { opacity: 0.7; }
+    100% { opacity: 1; }
+}
+
+/* Header Styles */
+/* Top Bar Styling */
+/* Top Bar Styling */
+.top-bar {
+    background: linear-gradient(90deg, #8B0000, #B22222);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Flex Container for Horizontal Alignment */
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px; /* Space between items */
+    flex-wrap: wrap;
+}
+
+/* Contact Links */
+.contact-link {
+    color: gold;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.contact-link:hover {
+    color: yellow;
+    text-shadow: 0px 0px 8px rgba(255, 215, 0, 0.9);
+}
+
+/* Icons */
+.icon {
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+
+/* Navigation Styling */
+nav {
+    background: #650f0f;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Navigation Container */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Logo */
+.logo {
+    width: 150px;
+    height: auto;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: gold;
+}
+
+/* Hamburger Menu Styling */
+.hamburger {
+    display: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #650f0f;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 10px 0;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-links li {
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .nav-links li a {
+        font-size: 18px;
+        display: block;
+        padding: 10px 0;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+}
+
+
+.logo {
+    height: 60px;
+    width: 70px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Navigation Links */
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: gold;
+    text-shadow: 0px 0px 10px gold;
+}
+
+/* Hero Slider */
+.slider-container {
+    position: relative;
+    max-width: 100%; /* Ensures it adapts to screen width */
+    height: 460px; /* Fixed height */
+    overflow: hidden; /* Prevents merging issues */
+    border-radius: 8px;
+    box-shadow: 0px 0px 20px rgba(255, 215, 0, 0.4);
+    margin-top: 0; /* Ensures no extra spacing */
+}
+
+.slider {
+    display: flex;
+    width: 100%; /* Adjusted based on number of slides */
+    transition: transform 1s ease-in-out;
+}
+
+.slide {
+    width: 100%; /* Ensure each slide takes full space */
+    height: 572px;
+    flex-shrink: 0;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image fits without distortion */
+}
+
+
+/* Manual Slider Controls */
+.slider-controls {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.slider-controls input[type="radio"] {
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #8a2020;
+    transition: 0.3s ease;
+}
+
+.slider-controls input[type="radio"]:checked {
+    background: #8a2020;
+    border: 2px solid gold;
+}
+.gold-info {
+    font-size: 16px;
+    color: white;
+    line-height: 1.6;
+    text-align: justify;
+    margin: 15px 0;
+    padding: 10px;
+    background: rgba(255, 215, 0, 0.1);
+    border-left: 4px solid gold;
+    border-radius: 5px;
+}
+
+
+/* Styling for the gold calculator section */
+.gold-price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;
+     /* Dark background for a premium look */
+    color: white;
+    text-align: center;
+}
+
+/* Container for the calculator */
+.gold-calculator-container {
+    background: black;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(255, 215, 0, 0.6); /* Gold glow effect */
+    width: 80%;
+    max-width: 100%;
+}
+
+/* Heading styling */
+.gold-calculator-container h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: gold;
+}
+
+/* Gold Prices Section */
+.gold-rates {
+   
+    padding: 40px 0;
+    text-align: center;
+    width: 100%;
+}
+
+/* Heading Style */
+.gold-rates h2 {
+    font-size: 28px;
+    color: #8B0000; /* Deep red for contrast */
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Table Styling - Full Width */
+.gold-rates table {
+    width: 100%; /* Full width */
+    border-collapse: collapse;
+    background: white;
+    border-radius: 0; /* Removes border-radius for a clean, full-width look */
+    box-shadow: 0px 0px 15px rgba(255, 215, 0, 0.6);
+    border-top: 4px solid gold;
+    border-bottom: 4px solid gold;
+}
+
+/* Table Header */
+.gold-rates th {
+    background: linear-gradient(90deg, #8B0000, #B22222); /* Deep red gradient */
+    color: white;
+    padding: 15px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+/* Table Body */
+.gold-rates td {
+    padding: 15px;
+    font-size: 17px;
+    color: black;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+}
+
+/* Alternate Row Colors for Better Readability */
+.gold-rates tbody tr:nth-child(odd) {
+    background: #f8e7a2; /* Soft gold */
+}
+
+.gold-rates tbody tr:nth-child(even) {
+    background: #fff; /* White row */
+}
+
+/* Hover Effect */
+.gold-rates tbody tr:hover {
+    background: gold;
+    color: black;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .gold-price {
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .gold-calculator-container {
+        width: 100% !important;
+        padding: 15px !important;
+    }
+
+    .gold-calculator-box {
+        width: 100% !important;
+    }
+
+    .logo-container img {
+        max-width: 100% !important; /* Make the logo fully responsive */
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    /* Ensure buttons and input fields take full width */
+    #gold-calculator input,
+    #gold-calculator button {
+        width: 100% !important;
+        font-size: 18px; /* Increase text size for better visibility */
+        padding: 12px;
+    }
+
+    /* Make tables responsive */
+    table {
+        width: 100% !important;
+        display: block;
+        overflow-x: auto;
+    }
+}
+
+
+/* Styling for the calculator box */
+.gold-calculator-box {
+    background: rgba(255, 215, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: inset 0px 0px 10px rgba(255, 215, 0, 0.4);
+    width: 100%;
+}
+
+/* Input field styling */
+#gold-calculator input {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    border: 2px solid gold;
+    border-radius: 5px;
+    outline: none;
+    background: black;
+    color: gold;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+}
+
+/* Input hover effect */
+#gold-calculator input:focus {
+    border-color: yellow;
+    box-shadow: 0px 0px 10px rgba(255, 215, 0, 0.8);
+}
+
+/* Button styling */
+#gold-calculator button {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    margin-top: 10px;
+    background: gold;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+
+/* Button hover effect */
+#gold-calculator button:hover {
+    background: yellow;
+    box-shadow: 0px 0px 15px rgba(255, 215, 0, 0.8);
+}
+
+/* Result text styling */
+#result {
+    font-size: 20px;
+    font-weight: bold;
+    color: gold;
+    margin-top: 15px;
+}
+
+
+
+
+/* Conditions for Selling Gold Section */
+/* Styling for Selling Conditions Section */
+.selling-conditions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;
+   
+    color: white;
+    text-align: center;
+    
+    
+}
+
+/* Container for Selling Conditions */
+.selling-conditions-container {
+    background: black;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(255, 215, 0, 0.6);
+    width: 80%;
+    
+    text-align: left;
+}
+
+/* Heading Style */
+.selling-conditions-container h2 {
+    font-size: 24px;
+    color: gold;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Styling for Paragraphs */
+.selling-conditions-container p {
+    font-size: 16px;
+    color: white;
+    line-height: 1.6;
+    text-align: justify;
+    margin-bottom: 10px;
+}
+
+/* Ordered List Styling */
+.selling-conditions-container ol {
+    padding-left: 20px;
+}
+
+/* List Item Styling */
+.selling-conditions-container ol li {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+/* Highlighted Strong Text */
+.selling-conditions-container strong {
+    color: gold;
+}
+@media (max-width: 768px) {
+    .selling-conditions {
+        width: 100% !important;
+        padding: 5px !important;
+        margin: 0 !important;
+    }
+
+    .selling-conditions-container {
+        width: 100% !important;
+        max-width: 100%;
+        padding: 15px !important;
+    }
+
+    .selling-conditions-container h2 {
+        font-size: 22px; /* Adjust heading size for better readability */
+        padding: 10px 0;
+    }
+
+    .selling-conditions-container p,
+    .selling-conditions-container ol {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .selling-conditions-container ol {
+        padding-left: 20px; /* Keep numbering aligned */
+    }
+}
+
+/* Buy & Sell Gold Section */
+.buy-sell {
+   
+    padding: 30px;
+    text-align: center;
+    margin: 30px auto;
+    border-radius: 8px;
+    
+    /* box-shadow: 0px 0px 15px black; */
+
+}
+
+.buy-sell h2 {
+    color: #650f0f;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.buy-sell p {
+    font-size: 18px;
+    color: #333;
+    margin-top: 10px;
+}
+
+/* Full-width Golden Tips Section */
+.golden-tips {
+    width: 100%;
+    
+    padding: 50px 0;
+    text-align: center;
+}
+
+/* Container with 90% Width */
+.golden-tips-container {
+    width: 90%;
+    max-width: 90%;
+    
+    color: black;
+    padding: 50px;
+    box-shadow: 0px 0px 20px goldenrod;
+    margin: 0 auto;
+}
+
+/* Centered Heading */
+.golden-tips-container h2 {
+    font-size: 32px;
+    color: Black;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(255, 215, 0, 0.8);
+}
+
+/* Content Text Styling */
+.golden-tips-content {
+    text-align: left;
+    max-width: 1100px; /* Keeps readability on large screens */
+    margin: 0 auto;
+}
+
+/* Subheadings with Golden Borders */
+.golden-tips-content h3 {
+    color: black;
+    font-size: 22px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid gold;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Paragraph Styling */
+.golden-tips-content p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: black;
+    margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .golden-tips-container {
+        width: 100%;
+        padding: 40px;
+    }
+
+    .golden-tips-container h2 {
+        font-size: 28px;
+    }
+
+    .golden-tips-content {
+        max-width: 95%;
+    }
+
+    .golden-tips-content h3 {
+        font-size: 20px;
+    }
+
+    .golden-tips-content p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .golden-tips-container {
+        padding: 30px;
+    }
+
+    .golden-tips-content h3 {
+        font-size: 18px;
+    }
+
+    .golden-tips-content p {
+        font-size: 14px;
+    }
+}
+
+
+/* Scrolling Ticker Effect */
+.ticker {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+}
+
+/* Moving Content */
+.ticker-content {
+    display: inline-block;
+    font-size: 18px;
+    color: gold;
+    font-weight: bold;
+    animation: scrollText 15s linear infinite;
+}
+
+/* Scrolling Animation */
+@keyframes scrollText {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+
+/* Footer Styling */
+/* Footer Styling */
+footer {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 30px;
+    box-shadow: 0px -4px 10px rgba(255, 215, 0, 0.3);
+    font-size: 16px;
+}
+
+/* Footer Navigation Links */
+.footer-nav {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Footer Links */
+footer a {
+    color: gold;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Footer Links Hover Effect */
+footer a:hover {
+    color: yellow;
+    text-shadow: 0px 0px 5px rgba(255, 215, 0, 0.9);
+}
+
+/* Sell Gold Locations - Unique Style */
+.sell-gold-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.sell-gold-links a {
+    background: rgba(255, 215, 0, 0.2);
+    padding: 5px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: 0.3s ease-in-out;
+}
+
+/* Hover Effect for Gold Location Links */
+.sell-gold-links a:hover {
+    background: gold;
+    color: black;
+    box-shadow: 0px 0px 10px rgba(255, 215, 0, 0.9);
+}
+
+/* Branding (Inway) */
+.inway {
+    color: gold;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
+
+.inway:hover {
+    color: yellow;
+    text-shadow: 0px 0px 5px rgba(255, 215, 0, 0.9);
+}
+
+/* Counter Styling */
+.counter {
+    font-size: 22px;
+    font-weight: bold;
+    background: rgba(255, 215, 0, 0.2);
+    padding: 10px 20px;
+    border-radius: 8px;
+    display: inline-block;
+    box-shadow: 0px 0px 10px rgba(255, 215, 0, 0.6);
+}
+
+/* Gold Border */
+.gold-border-bottom {
+    width: 100%;
+    height: 10px;
+    background: gold;
+    box-shadow: 0px 0px 10px rgba(255, 215, 0, 0.8);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sell-gold-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sell-gold-links a {
+        display: block;
+        width: 90%;
+        text-align: center;
+    }
+}
+
+
+/* Visitor Counter */
+.counter {
+    font-size: 28px;
+    font-weight: bold;
+    color: gold;
+    display: inline-block;
+    font-family: 'Courier New', monospace;
+    letter-spacing: 3px;
+    padding: 10px;
+    background: rgba(255, 215, 0, 0.1);
+    border: 2px solid gold;
+    box-shadow: 0px 0px 15px gold;
+    border-radius: 5px;
+    animation: glow 2s infinite alternate;
+}
+
+/* Counter Glow Effect */
+@keyframes glow {
+    0% { box-shadow: 0px 0px 10px gold; }
+    100% { box-shadow: 0px 0px 20px gold; }
+}
+/* Style for the box */
+.gold-box {
+    width: 100%; /* Adjust width as needed */
+     /* Prevents the box from being too wide */
+    margin: 30px auto; /* Centers the box below the slider */
+    padding: 20px;
+    background-color: #8a2020; /* Box background color */
+    color: white; /* Text color */
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    
+    transition: all 0.4s ease-in-out;
+}
+
+/* Glow effect when hovering over the box */
+.gold-box:hover {
+    box-shadow: 0px 0px 30px rgba(255, 215, 0, 0.8); /* Golden glow */
+    border: 2px solid gold;
+    color: gold; /* Text turns gold when hovered */
+}
+/* BIS Hallmark Section */
+.bis-hallmark {
+    text-align: center;
+    
+    padding: 50px 0;
+}
+
+.bis-container {
+    max-width: 800px;
+    margin: auto;
+}
+
+.bis-logo {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+.bis-container h2 {
+    font-size: 28px;
+    color: #00274E; /* Deep blue matching the BIS logo */
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.bis-container h2 span {
+    color: #8B0000; /* Deep red for emphasis */
+}
+
+.bis-container p {
+    font-size: 18px;
+    color: #333;
+}
+
+/* Gold Pricing Section */
+.gold-pricing {
+    
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.gold-pricing-container {
+    max-width: 900px;
+    margin: auto;
+}
+
+.gold-pricing p {
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Gold Testing Section */
+/* General Section Styling */
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* BIS Hallmark Section */
+.bis-container {
+    max-width: 800px;
+   
+}
+
+.bis-logo {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+.bis-container h2 {
+    font-size: 28px;
+    color: #00274E;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.bis-container h2 span {
+    color: #8B0000;
+}
+
+.bis-container p {
+    font-size: 18px;
+    color: #333;
+}
+
+/* Gold Pricing Section */
+.gold-pricing-container {
+    max-width: 900px;
+    margin: auto;
+}
+
+.gold-pricing p {
+    font-size: 18px;
+    
+    font-weight: bold;
+}
+
+/* General Section Styling */
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* General Section Styling */
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* Gold Testing Section */
+.gold-testing-container {
+    max-width: 900px;
+    margin: auto;
+}
+
+.gold-testing h2 {
+    font-size: 26px;
+    color: #8B0000;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.gold-testing p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Wrapper for Horizontal Layout */
+.testing-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Left Side - 30% Width for Gold Testing Machine */
+.testing-image {
+    width: 30%;
+    max-width: 400px;
+}
+
+.testing-image img {
+    width: 100%;
+    display: block;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Right Side - 70% Width for YouTube Video */
+.testing-video {
+    width: 70%;
+    max-width: 900px;
+}
+
+.testing-video iframe {
+    width: 100%;
+    height: 400px;
+    display: block;
+    border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .gold-testing h2 {
+        font-size: 24px;
+    }
+
+    .gold-testing p {
+        font-size: 16px;
+    }
+
+    .testing-wrapper {
+        flex-direction: column; /* Stacks elements on smaller screens */
+        align-items: center;
+    }
+
+    .testing-image,
+    .testing-video {
+        width: 100%; /* Full width on mobile */
+        max-width: 90%;
+    }
+
+    .testing-video iframe {
+        height: 300px;
+    }
+}
+
+
+
+.bis-logo{
+    width: 300px;
+}
+.gold-tester{
+    width: 0%;
+}
+/* Unique Styling for Gold Rate */
+.gold-rate {
+    font-size: 32px;
+    font-weight: bold;
+    color: #FFD700; /* Gold color */
+    display: inline-block;
+    position: relative;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.8), 
+                 0 0 20px rgba(255, 165, 0, 0.6), 
+                 0 0 30px rgba(255, 140, 0, 0.5);
+}
+
+
+
+
+
+/* Moving Shine Effect on Button */
+.gold-rate .gold-button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 100%);
+    animation: shine-move 3.5s infinite linear;
+}
+
+/* Shine Animation */
+@keyframes shine-move {
+    0% {
+        left: -300%;
+    }
+    100% {
+        left: 30%;
+    }
+}
+/* Center and Resize Logo */
+.logo-calc {
+    display: block; /* Ensures proper centering */
+    margin: 0 auto; /* Centers the logo horizontally */
+    width: 200px; /* Adjust size as needed */
+    max-width: 250px; /* Prevents excessive stretching */
+    height: auto; /* Maintains aspect ratio */
+}
+/* Wrapper for Logo with Glowing Square */
+.logo-container {
+    position: relative;
+    display: flex;
+    justify-content: center; /* Centers the logo */
+    align-items: center;
+    width: 180px; /* Adjust as needed */
+    height: 180px;
+}
+
+/* Wrapper for Centering the Logo */
+.logo-container {
+    display: flex;
+    justify-content: center; /* Centers the logo horizontally */
+    align-items: center; /* Centers the logo vertically */
+    width: 200px; /* Adjust width */
+    height: 200px; /* Adjust height */
+    position: relative;
+    margin: 0 auto; /* Centers the div in its parent container */
+}
+
+/* Logo Styling */
+.logo-container img {
+    width: 150px; /* Adjust logo size */
+    height: auto;
+    display: block;
+    position: relative;
+    z-index: 2; /* Ensures the logo stays on top */
+}
+
+/* Square Glowing Effect */
+.logo-container::after {
+    content: "";
+    position: absolute;
+    width: 170px; /* Adjust glow size */
+    height: 170px;
+    border: 3px solid rgba(255, 215, 0, 0.8);
+    box-shadow: 0px 0px 10px #FFD700, 0px 0px 20px rgba(255, 215, 0, 0.6);
+    animation: square-shimmer 2s infinite linear;
+    z-index: 1; /* Keeps glow behind the logo */
+}
+
+/* Square Shimmer Animation */
+@keyframes square-shimmer {
+    0% { box-shadow: 0px 0px 5px #FFD700; }
+    50% { box-shadow: 0px 0px 15px #FFEC8B, 0px 0px 20px #FFD700; }
+    100% { box-shadow: 0px 0px 5px #FFD700; }
+}
+
+
+/* Button-Like Structure */
+.box-glow {
+    display: inline-block;
+    background: #FFD700;
+    color: black;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 12px 20px;
+    border-radius: 12px;
+    text-transform: uppercase;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+/* Inner Text Styling */
+.box-glow span {
+    color: white;
+}
+
+/* Button Hover Effect - Sparkle */
+.box-glow:hover {
+    box-shadow: 0 0 30px rgba(255, 215, 0, 1), 0 0 50px rgba(255, 140, 0, 1);
+}
+
+/* Sparkling Effect on Hover */
+.box-glow::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.6) 10%, rgba(255, 215, 0, 0) 40%);
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.5s ease-out;
+}
+
+/* Activates sparkle effect on hover */
+.box-glow:hover::after {
+    transform: translate(-50%, -50%) scale(1);
+}
+/* Gold Rates Table - Now Integrated */
+table {
+    width: 100%; /* Full width for consistency */
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0px 0px 15px rgba(255, 215, 0, 0.6);
+    border-top: 4px solid gold;
+    border-bottom: 4px solid gold;
+}
+
+/* Table Header */
+thead th {
+    background: linear-gradient(90deg, #8B0000, #8B0000); /* Deep red gradient */
+    color: white;
+    padding: 15px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+/* Table Cells */
+td {
+    padding: 15px;
+    font-size: 17px;
+    color: black;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+}
+
+/* Alternate Row Colors for Readability */
+tbody tr:nth-child(odd) {
+    background: white; /* Soft gold */
+}
+
+tbody tr:nth-child(even) {
+    background: white; /* White row */
+}
+
+/* Hover Effect */
+tbody tr:hover {
+    background: gold;
+    color: black;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    table {
+        width: 100%;
+    }
+
+    th, td {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+.usa {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    background: gold;
+    border-left: 4px solid gold;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(255, 215, 0, 0.5);
+    max-width: 80%;
+    margin: 20px auto;
+}
+
