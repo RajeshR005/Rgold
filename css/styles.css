@@ -264,3 +264,188 @@ footer {
     0% { box-shadow: 0px 0px 10px #FFD700; }
     100% { box-shadow: 0px 0px 20px #FFD700; }
 }
+@media (max-width: 768px) {
+    /* Ensure the container takes full width */
+    .container {
+        width: 100%;
+        max-width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    /* Make Logo Centered and Responsive */
+    .logo {
+        width: 100%;
+        max-width: 180px;
+        margin: 0 auto;
+    }
+
+    .logo img {
+        width: 100%;
+        max-width: 150px;
+    }
+
+    /* Ensure language buttons and Call Now are the same width */
+    .languages {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    /* Make each row full width */
+    .row {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        gap: 10px;
+    }
+
+    /* Make buttons full width */
+    .lang-btn,
+    .call-now-button {
+        width: 90% !important; /* Ensures same width for all buttons */
+        max-width: 320px;
+        padding: 15px;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+        border-radius: 25px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    /* Ensure "English" button width matches other buttons */
+   @media (max-width: 768px) {
+    /* Ensure the container takes full width */
+    .container {
+        width: 100%;
+        max-width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    /* Make Logo Centered and Responsive */
+    .logo {
+        width: 100%;
+        max-width: 180px;
+        margin: 0 auto;
+    }
+
+    .logo img {
+        width: 100%;
+        max-width: 150px;
+    }
+
+    /* Ensure language buttons and Call Now are the same width */
+    .languages {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    /* Make each row full width */
+    .row {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        gap: 10px;
+    }
+
+    /* Make buttons full width */
+    .row, .full-width {
+        width: 90% !important; /* Ensures same width for all buttons */
+        max-width: 320px;
+        
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+        border-radius: 25px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    /* Ensure "English" button width matches other buttons */
+    
+
+    /* Call Now Button */
+    .call-now-button {
+        background-color: green;
+        color: white;
+        text-align: center;
+        max-width: 140px;
+    }
+
+    /* Restore the missing gold borders */
+    .gold-border-top,
+    .gold-border-bottom {
+        width: 100%;
+        height: 10px;
+        background: linear-gradient(90deg, #FFD700, #FFEC8B, #FFD700);
+        box-shadow: 0px 0px 10px #FFD700;
+        animation: shimmer 3s infinite alternate;
+    }
+
+    /* Footer Adjustments */
+    footer {
+        text-align: center;
+        padding: 10px;
+        width: 100%;
+        background-color: black;
+    }
+
+    /* Visitor Counter */
+    .counter {
+        font-size: 24px;
+        padding: 8px;
+    }
+}
+
+/* Shimmer Effect for Borders */
+@keyframes shimmer {
+    0% { opacity: 0.7; }
+    100% { opacity: 1; }
+}
+
+
+    /* Call Now Button */
+    .call-now-button {
+        background-color: green;
+        color: white;
+        text-align: center;
+    }
+
+    /* Restore the missing gold borders */
+    .gold-border-top,
+    .gold-border-bottom {
+        width: 100%;
+        height: 10px;
+        background: linear-gradient(90deg, #FFD700, #FFEC8B, #FFD700);
+        box-shadow: 0px 0px 10px #FFD700;
+        animation: shimmer 3s infinite alternate;
+    }
+
+    /* Footer Adjustments */
+    footer {
+        text-align: center;
+        padding: 10px;
+        width: 100%;
+        background-color: black;
+    }
+
+    /* Visitor Counter */
+    .counter {
+        font-size: 24px;
+        padding: 8px;
+    }
+}
+
+/* Shimmer Effect for Borders */
+@keyframes shimmer {
+    0% { opacity: 0.7; }
+    100% { opacity: 1; }
+}
+
